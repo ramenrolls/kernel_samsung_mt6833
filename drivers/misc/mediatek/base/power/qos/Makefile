@@ -42,10 +42,12 @@ endif
 
 ifeq ($(CONFIG_MACH_MT6877),y)
 ccflags-y += -I$(srctree)/drivers/misc/mediatek/base/power/qos/mt6877
-else ifeq($(CONFIG_MACH_MT6781),y)
-ccflags-y += -I$(srctree)/drivers/misc/mediatek/base/power/qos/$(MTK_PLATFORM)/
-else
-ccflags-y += -I$(srctree)/drivers/misc/mediatek/base/power/qos/$(CONFIG_MTK_PLATFORM)
+else 
+	ifeq ($(CONFIG_MACH_MT6781),y)	
+		ccflags-y += -I$(srctree)/drivers/misc/mediatek/base/power/qos/$(MTK_PLATFORM)
+	else
+		ccflags-y += -I$(srctree)/drivers/misc/mediatek/base/power/qos/$(CONFIG_MTK_PLATFORM)
+	endif
 endif
 
 obj-y += mtk_qos_main.o mtk_qos_bound.o mtk_qos_sram.o  mtk_qos_sysfs.o
