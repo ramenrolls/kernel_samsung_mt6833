@@ -213,7 +213,7 @@ int sspm_reserve_memory_init(struct platform_device *pdev)
 	return 0;
 }
 
-void sspm_lock_emi_mpu(void)
+__init void sspm_lock_emi_mpu(void)
 {
 #if SSPM_EMI_PROTECTION_SUPPORT
 	if (sspm_mem_size > 0)
