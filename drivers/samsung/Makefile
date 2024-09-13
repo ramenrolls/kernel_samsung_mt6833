@@ -6,9 +6,9 @@
 # Licensed under GPLv2
 
 MTK_PLATFORM := $(subst ",,$(CONFIG_MTK_PLATFORM))
-subdir-ccflags-y += -Werror -I$(srctree)/drivers/misc/mediatek/include
-subdir-ccflags-y += -Werror -I$(srctree)/drivers/misc/mediatek/include/mt-plat/$(MTK_PLATFORM)/include
-subdir-ccflags-y += -Werror -I$(srctree)/drivers/misc/mediatek/include/mt-plat
+subdir-ccflags-y += -I$(srctree)/drivers/misc/mediatek/include
+subdir-ccflags-y += -I$(srctree)/drivers/misc/mediatek/include/mt-plat/$(MTK_PLATFORM)/include
+subdir-ccflags-y += -I$(srctree)/drivers/misc/mediatek/include/mt-plat
 
 obj-$(CONFIG_SEC_DEBUG)		+= debug/
 obj-$(CONFIG_SEC_MISC)		+= misc/

@@ -2142,7 +2142,7 @@ static ssize_t fts_test_store(
     return count;
 }
 
-int fts_factory_test()
+int fts_factory_test(void)
 {
     int ret = 0;
     //char fwname[FILE_NAME_LENGTH] = { "focaltech_ft8722_truly.ini" };

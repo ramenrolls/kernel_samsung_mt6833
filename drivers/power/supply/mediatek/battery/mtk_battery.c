@@ -983,7 +983,7 @@ struct battery_data battery_main = {
 	.BAT_batt_temp = 0,
 };
 
-static otg_state = 1;
+static int otg_state = 1;
 #if defined(CONFIG_W2_CHARGER_PRIVATE)
 static int otg_type = 0;
 #endif

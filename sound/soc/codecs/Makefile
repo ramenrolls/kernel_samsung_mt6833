@@ -2,12 +2,12 @@
 
 ifeq ($(CONFIG_SND_SOC_MT6359),y)
   MTK_PLATFORM := $(subst ",,$(CONFIG_MTK_PLATFORM))
-  subdir-ccflags-y += -Werror -I$(srctree)/drivers/misc/mediatek/include/mt-plat/$(MTK_PLATFORM)/include
-  subdir-ccflags-y += -Werror -I$(srctree)/drivers/misc/mediatek/accdet/mt6359
+  subdir-ccflags-y += -I$(srctree)/drivers/misc/mediatek/include/mt-plat/$(MTK_PLATFORM)/include
+  subdir-ccflags-y += -I$(srctree)/drivers/misc/mediatek/accdet/mt6359
 else ifeq ($(CONFIG_SND_SOC_MT6359),m)
   MTK_PLATFORM := $(subst ",,$(CONFIG_MTK_PLATFORM))
-  subdir-ccflags-y += -Werror -I$(srctree)/drivers/misc/mediatek/include/mt-plat/$(MTK_PLATFORM)/include
-  subdir-ccflags-y += -Werror -I$(srctree)/drivers/misc/mediatek/accdet/mt6359
+  subdir-ccflags-y += -I$(srctree)/drivers/misc/mediatek/include/mt-plat/$(MTK_PLATFORM)/include
+  subdir-ccflags-y += -I$(srctree)/drivers/misc/mediatek/accdet/mt6359
 endif
 
 snd-soc-88pm860x-objs := 88pm860x-codec.o
@@ -559,8 +559,8 @@ obj-$(CONFIG_SND_SOC_SIA8159)	+= sia8159/
 
 ifneq (, $(filter y,$(CONFIG_SND_SOC_MT6358) $(CONFIG_SND_SOC_MT6366)))
   MTK_PLATFORM := $(subst ",,$(CONFIG_MTK_PLATFORM))
-  subdir-ccflags-y += -Werror -I$(srctree)/drivers/misc/mediatek/include/mt-plat/$(MTK_PLATFORM)/include
-  subdir-ccflags-y += -Werror -I$(srctree)/drivers/misc/mediatek/accdet/mt6358
+  subdir-ccflags-y += -I$(srctree)/drivers/misc/mediatek/include/mt-plat/$(MTK_PLATFORM)/include
+  subdir-ccflags-y += -I$(srctree)/drivers/misc/mediatek/accdet/mt6358
 endif
 
 # bug 828714, shenwenlei.wt, 20230301, add open the receiver and press ANFR

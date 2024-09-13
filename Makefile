@@ -441,6 +441,10 @@ KBUILD_CFLAGS   := -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs \
 		   -Werror-implicit-function-declaration \
 		   -Werror=return-type -Wno-format-security \
 		   -std=gnu89
+KBUILD_CFLAGS += -Wno-error=unused-but-set-variable
+KBUILD_CFLAGS += -Wno-error=unused-function
+KBUILD_CFLAGS += -Wno-error=strict-prototypes
+KBUILD_CFLAGS += -Wno-error=single-bit-bitfield-constant-conversion
 KBUILD_CPPFLAGS := -D__KERNEL__
 KBUILD_AFLAGS_KERNEL :=
 KBUILD_CFLAGS_KERNEL :=

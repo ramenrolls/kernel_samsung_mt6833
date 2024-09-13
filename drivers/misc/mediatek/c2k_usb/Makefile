@@ -17,6 +17,8 @@ ifeq ($(CONFIG_MTK_ECCCI_C2K), y)
 
 #ccflags-y += -DC2K_USB_UT
 
+ccflags-y += -Wno-error=single-bit-bitfield-constant-conversion
+
 ccflags-y += -I$(srctree)/drivers/usb/gadget
 ccflags-y += -I$(srctree)/drivers/misc/mediatek/usb_boost/
 

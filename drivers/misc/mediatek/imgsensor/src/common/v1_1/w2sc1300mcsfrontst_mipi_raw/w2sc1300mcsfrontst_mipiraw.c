@@ -251,7 +251,7 @@ static void set_dummy(void)
 }	/*	set_dummy  */
 
 
-static kal_uint32 return_sensor_id()
+static kal_uint32 return_sensor_id(void)
 {
 	return ((read_cmos_sensor(0x3107) << 8) | read_cmos_sensor(0x3108)+1); //0xc628
 }
